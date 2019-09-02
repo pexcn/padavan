@@ -13,3 +13,11 @@ config.log
 config.status
 toolchain-*
 toolchain-*/*
+
+src/mipsel-linux-uclibc-toolchain/binutils-2.24/
+src/mipsel-linux-uclibc-toolchain/build-binutils/
+src/mipsel-linux-uclibc-toolchain/build-gcc-bootstrap-cpp/
+src/mipsel-linux-uclibc-toolchain/build-gcc-bootstrap/
+src/mipsel-linux-uclibc-toolchain/gcc-4.4.7/
+src/mipsel-linux-uclibc-toolchain/include/
+src/mipsel-linux-uclibc-toolchain/uClibc-0.9.33.2/
