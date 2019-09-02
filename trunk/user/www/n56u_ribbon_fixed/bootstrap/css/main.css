@@ -33,7 +33,7 @@ body.body_iframe{
     text-decoration: none;
 }
 
-#footer{color: #F5F5F5}
+#footer{color: #F5F5F5; display: none}
 
 .form_thin{margin-bottom: 0px}
 
