@@ -10,7 +10,6 @@ prepare() {
 
 release() {
   cp -r trunk/images release
-  mv build.log release
 }
 
 deploy() {
