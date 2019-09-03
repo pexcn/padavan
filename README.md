@@ -6,6 +6,18 @@ This project aims to improve the rt-n56u and other supported devices on the soft
 This project was created in hope to be useful, but comes without warranty or support. Installing it will probably void your warranty. 
 Contributors of this project are not responsible for what happens next.
 
+### Default Settings ###
+
+```
+Wi-Fi 2.4 GHz SSID: Padavan
+Wi-Fi 5 GHz SSID: Padavan-5G
+Wi-Fi Password: 1234567890
+
+Gateway IP: 192.168.1.1 / my.router
+Gateway Username: admin
+Gateway Password: admin
+```
+
 ### How do I get set up? ###
 
 * [Get the tools to build the system](https://bitbucket.org/padavan/rt-n56u/wiki/EN/HowToMakeFirmware) or [Download pre-built system image](https://bitbucket.org/padavan/rt-n56u/downloads)
