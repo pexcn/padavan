@@ -341,11 +341,11 @@ function show_banner(L3){
 	bc += '<div class="row-fluid">\n';
 	bc += '<table class="table table-condensed" style="margin-bottom: 0px">\n';
 	bc += '  <tr>\n';
-	bc += '    <td width="50%" style="border: 0 none;"><#menu5_1#>:</td>\n';
+	bc += '    <td width="50%" style="border: 0 none;"><#menu5_1#></td>\n';
 	bc += '    <td style="border: 0 none; min-width: 115px;"><div class="form-inline"><input type="button" id="wifi2_b" class="btn btn-mini '+enabled2Gclass+'" style="'+style_2g+'" value="2.4GHz" onclick="go_setting(2);">&nbsp;<input type="button" id="wifi5_b" style="'+style_5g+'" class="btn btn-mini '+enabled5Gclass+'" value="5GHz" onclick="go_setting(5);"></div></td>\n';
 	bc += '  </tr>\n';
 	bc += '  <tr>\n';
-	bc += '    <td><#menu5_1_2#>:</td>\n';
+	bc += '    <td><#menu5_1_2#></td>\n';
 	bc += '    <td><div class="form-inline"><input type="button" id="wifi2_b_g" class="btn btn-mini '+enabledGuest2Gclass+'" style="'+style_2g+'" value="2.4GHz" onclick="go_wguest(2);">&nbsp;<input type="button" id="wifi5_b_g" style="'+style_5g+'" class="btn btn-mini '+enabledGuest5Gclass+'" value="5GHz" onclick="go_wguest(5);"></div></td>\n';
 	bc += '  </tr>\n';
 	bc += '  <tr>\n';
