@@ -46,7 +46,8 @@ env:
     - secure: "DsgmBSakDyME7OgBATpzHPrAovrSmThflnu/WYwqyshwoVw8hc2ybz11VqNK8jQWD/ndRcczRTamEmW4mDqDCRdbUznFzTN45Sj4z4WcppIMDwGQZWlWe6r1lijKk+Lr9icg+0lEHbYBvESKm1wXzuO8NqNuZqSFKidNwoaqcLjJ/Hckn9EC0SNF7fHHQRkKvOR69aBPsy/Dod9ON+RH6ke3py8xCcAOc3fGSs4ZfMhq6Ei1apC40E/cvkAw+XlUN9PMDNiEsEk5ZK7dDl3dLrx4C5Yfc9ilff8S9lMYETsYqblUHOwTbsiPRmPJj0ACnytqZjEN+OslFFR2LDM1n2EWP78S1meFOZa0RyCDYnZ1s/KHmHOpXa9tcWZUPOw2OkLP33/JZDwYDZqt1d0gg849eX05Clwh2jsrCK8GZHm4VFEJCh4f8sZ75bRDeBKSg+HyD7OJLQgYVhOqukV0gxKGtKbxCcK1Nqr1Xzb5Dkq5UnTnb2cF2pqbZ+5LE/2ihLY47D88YQMuGvJg1Db2LCZM9wklytFd0tdFTrH0yMrDqM+hL+0lPHyMMkvMjxiVlYUIosYzvDrKt/gNl/l8TOhDCEDVadukK+wUhHcIH74S++TKPYa9HIwmqyYRMHNgq7Rck0yFziP9Srhdshxb3SkaB3gouQKlCCVh25IVeLk="
 
 script:
-  - ./build.sh
+  - travis_wait 30 sleep infinity &
+  - ./build.sh &> /dev/null
 
 after_success:
   - ./deploy.sh
