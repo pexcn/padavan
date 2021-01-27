@@ -9,6 +9,7 @@ prepare() {
 }
 
 release() {
+  mkdir release
   cp -r trunk/images/*.trx release
 }
 
