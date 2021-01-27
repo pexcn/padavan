@@ -56,7 +56,7 @@ struct nvram_pair router_defaults[] = {
 	{ "lan_dns_x", "1" },			/* LAN DNS [static|dhcp] */
 	{ "lan_dns1", "" },			/* LAN DNS1 */
 	{ "lan_dns2", "" },			/* LAN DNS2 */
-	{ "lan_domain", "" },			/* LAN domain name */
+	{ "lan_domain", "lan" },		/* LAN domain name */
 	{ "lan_stp", "1" },			/* LAN spanning tree protocol */
 
 	/* WAN H/W parameters */
@@ -191,14 +191,14 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_TxPower", "100" },
 	{ "wl_TxBurst", "1" },
 	{ "wl_PktAggregate", "1" },
-	{ "wl_APSDCapable", "1" },
+	{ "wl_APSDCapable", "0" },
 	{ "wl_HT_OpMode", "0" },
 #if BOARD_HAS_5G_11AC
 	{ "wl_HT_BW", "2" },
 #else
 	{ "wl_HT_BW", "1" },
 #endif
-	{ "wl_txbf", "0" },
+	{ "wl_txbf", "1" },
 	{ "wl_ssid2",  DEF_WLAN_5G_SSID },
 	{ "wl_mode_x", "0" },
 	{ "wl_wdsapply_x", "0" },
@@ -275,7 +275,7 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_TxPower", "100" },
 	{ "rt_TxBurst", "1" },
 	{ "rt_PktAggregate", "1" },
-	{ "rt_APSDCapable", "1" },
+	{ "rt_APSDCapable", "0" },
 	{ "rt_auth_mode", "psk" },
 	{ "rt_crypto", "aes" },
 	{ "rt_wpa_psk", DEF_WLAN_2G_PSK },
@@ -343,7 +343,7 @@ struct nvram_pair router_defaults[] = {
 	// USB related
 	{ "acc_num", "0" },
 	{ "enable_ftp", "0" },
-	{ "enable_samba", "1" },
+	{ "enable_samba", "0" },
 	{ "st_samba_fp", "1" },
 	{ "st_samba_mode", "1" },
 	{ "st_samba_lmb", "1" },
@@ -511,7 +511,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ddns2_ssl", "1" },
 	{ "asusddns_tos_agreement", "0" },
 
-	{ "preferred_lang", "" },
+	{ "preferred_lang", "CN" },
 
 	{ "modem_rule", "0" },
 	{ "modem_prio", "1" },
@@ -554,12 +554,12 @@ struct nvram_pair router_defaults[] = {
 	{ "di_lost_delay", "10" },
 	{ "di_lost_action", "0" },
 	{ "di_recon_pause", "0" },
-	{ "di_addr0", "77.88.8.8" },
-	{ "di_addr1", "8.8.8.8" },
-	{ "di_addr2", "208.67.222.222" },
-	{ "di_addr3", "77.88.8.1" },
-	{ "di_addr4", "8.8.4.4" },
-	{ "di_addr5", "208.67.220.220" },
+	{ "di_addr0", "114.114.114.114" },
+	{ "di_addr1", "208.67.222.222" },
+	{ "di_addr2", "208.67.220.220" },
+	{ "di_addr3", "77.88.8.8" },
+	{ "di_addr4", "8.8.8.8" },
+	{ "di_addr5", "8.8.4.4" },
 	{ "di_port0", "53" },
 	{ "di_port1", "53" },
 	{ "di_port2", "53" },
@@ -603,7 +603,7 @@ struct nvram_pair router_defaults[] = {
 	{ "fn2_action_short", "0" },
 	{ "fn2_action_long", "0" },
 #endif
-	{ "watchdog_cpu", "0" },
+	{ "watchdog_cpu", "1" },
 	{ "front_led_all", "1" },
 	{ "front_led_wan", "2" },
 	{ "front_led_lan", "1" },
