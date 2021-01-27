@@ -9,7 +9,7 @@ prepare() {
 }
 
 release() {
-  cp -r trunk/images release
+  cp -r trunk/images/*.trx release
 }
 
 deploy() {
