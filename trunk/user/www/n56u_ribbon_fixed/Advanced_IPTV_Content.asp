@@ -294,7 +294,7 @@ function on_xupnpd_link(){
                                             <th colspan="3" style="background-color: #E3E3E3;"><#IPTVProxy#></th>
                                         </tr>
                                         <tr>
-                                            <th width="50%"><a class="help_tooltip" href="javascript:void(0);" onmouseover="openTooltip(this,6, 6);"><#RouterConfig_IPTV_itemname#>:</a></th>
+                                            <th width="50%"><a class="help_tooltip" href="javascript:void(0);" onmouseover="openTooltip(this,6, 6);"><#RouterConfig_IPTV_itemname#></a></th>
                                             <td>
                                                 <input type="text" maxlength="5" class="input" size="15" name="udpxy_enable_x" value="<% nvram_get_x("", "udpxy_enable_x"); %>" onkeypress="return is_number(this,event);" onblur="valid_udpxy();"/>
                                             </td>
@@ -342,7 +342,7 @@ function on_xupnpd_link(){
                                             </td>
                                         </tr>
                                         <tr id="row_m2u_wire">
-                                            <th>M2U - <#menu5_2_5#>:</th>
+                                            <th>M2U - <#menu5_2_5#></th>
                                             <td>
                                                 <select name="ether_m2u" class="input" onchange="on_change_m2u_wire();">
                                                     <option value="0" <% nvram_match_x("", "ether_m2u", "0", "selected"); %>><#btn_Disable#></option>
@@ -369,7 +369,7 @@ function on_xupnpd_link(){
                                             </td>
                                         </tr>
                                         <tr id="row_m2u_2ghz">
-                                            <th>M2U - <#menu5_11#>:</th>
+                                            <th>M2U - <#menu5_11#></th>
                                             <td>
                                                 <select name="rt_IgmpSnEnable" class="input">
                                                     <option value="0" <% nvram_match_x("", "rt_IgmpSnEnable", "0", "selected"); %>><#btn_Disable#></option>
@@ -378,7 +378,7 @@ function on_xupnpd_link(){
                                             </td>
                                         </tr>
                                         <tr id="row_m2u_5ghz">
-                                            <th>M2U - <#menu5_12#>:</th>
+                                            <th>M2U - <#menu5_12#></th>
                                             <td>
                                                 <select name="wl_IgmpSnEnable" class="input">
                                                     <option value="0" <% nvram_match_x("", "wl_IgmpSnEnable", "0", "selected"); %>><#btn_Disable#></option>

@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+select_config() {
+  cp trunk/configs/templates/mi_mini.config trunk/.config
+}
+
 update_config() {
   local line=$(cat trunk/.config | grep -m 1 "CONFIG_TOOLCHAIN_DIR=")
   local replace="CONFIG_TOOLCHAIN_DIR=$(pwd)/toolchain-mipsel"
@@ -20,6 +24,7 @@ build_firmware() {
   cd ..
 }
 
+select_config
 update_config
 build_toolchain
 build_firmware
