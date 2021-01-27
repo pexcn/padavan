@@ -1,8 +1,8 @@
 ##################################################################
 # Board PID # Board Name       # PRODUCT # Note
 ##################################################################
-# MIWIFI-MINI # XiaoMi MiWiFi Mini # MT7620 #
+# MI-MINI   # Xiaomi Mi Mini   # MT7620  #
 ##################################################################
 
-CFLAGS += -DBOARD_AC54U -DVENDOR_ASUS
+CFLAGS += -DBOARD_MIMINI
 BOARD_NUM_USB_PORTS=1
