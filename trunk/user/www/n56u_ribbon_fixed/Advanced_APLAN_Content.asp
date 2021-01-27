@@ -313,13 +313,13 @@ function done_validating(action){
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#LANHostConfig_x_LDNSServer1_itemname#> 1:</th>
+                                            <th><#LANHostConfig_x_LDNSServer1_itemname#> 1</th>
                                             <td>
                                                 <input type="text" name="lan_dns1" value="<% nvram_get_x("", "lan_dns1"); %>" maxlength="15" class="input" size="15" onkeypress="return is_ipaddr(this,event);" />
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#LANHostConfig_x_LDNSServer1_itemname#> 2:</th>
+                                            <th><#LANHostConfig_x_LDNSServer1_itemname#> 2</th>
                                             <td>
                                                 <input type="text" name="lan_dns2" value="<% nvram_get_x("", "lan_dns2"); %>" maxlength="15" class="input" size="15" onkeypress="return is_ipaddr(this,event);" />
                                             </td>

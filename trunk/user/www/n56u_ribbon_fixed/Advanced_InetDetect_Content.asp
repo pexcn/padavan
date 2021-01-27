@@ -159,42 +159,42 @@ function done_validating(action){
                                             <th colspan="2" style="background-color: #E3E3E3;"><#InetCheckHosts#></th>
                                         </tr>
                                         <tr>
-                                            <th width="50%"><#InetCheckHostIP4#> 1:</th>
+                                            <th width="50%"><#InetCheckHostIP4#> 1</th>
                                             <td>
                                                 <input type="text" maxlength="15" class="input" size="15" name="di_addr0" style="width: 145px" value="<% nvram_get_x("","di_addr0"); %>" onkeypress="return is_ipaddr(this,event);"/>&nbsp;:
                                                 <input type="text" maxlength="5" class="input" size="10" name="di_port0" style="width: 44px;"  value="<% nvram_get_x("","di_port0"); %>" onkeypress="return is_number(this,event);"/>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#InetCheckHostIP4#> 2:</th>
+                                            <th><#InetCheckHostIP4#> 2</th>
                                             <td>
                                                 <input type="text" maxlength="15" class="input" size="15" name="di_addr1" style="width: 145px" value="<% nvram_get_x("","di_addr1"); %>" onkeypress="return is_ipaddr(this,event);"/>&nbsp;:
                                                 <input type="text" maxlength="5" class="input" size="10" name="di_port1" style="width: 44px;"  value="<% nvram_get_x("","di_port1"); %>" onkeypress="return is_number(this,event);"/>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#InetCheckHostIP4#> 3:</th>
+                                            <th><#InetCheckHostIP4#> 3</th>
                                             <td>
                                                 <input type="text" maxlength="15" class="input" size="15" name="di_addr2" style="width: 145px" value="<% nvram_get_x("","di_addr2"); %>" onkeypress="return is_ipaddr(this,event);"/>&nbsp;:
                                                 <input type="text" maxlength="5" class="input" size="10" name="di_port2" style="width: 44px;"  value="<% nvram_get_x("","di_port2"); %>" onkeypress="return is_number(this,event);"/>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#InetCheckHostIP4#> 4:</th>
+                                            <th><#InetCheckHostIP4#> 4</th>
                                             <td>
                                                 <input type="text" maxlength="15" class="input" size="15" name="di_addr3" style="width: 145px" value="<% nvram_get_x("","di_addr3"); %>" onkeypress="return is_ipaddr(this,event);"/>&nbsp;:
                                                 <input type="text" maxlength="5" class="input" size="10" name="di_port3" style="width: 44px;"  value="<% nvram_get_x("","di_port3"); %>" onkeypress="return is_number(this,event);"/>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#InetCheckHostIP4#> 5:</th>
+                                            <th><#InetCheckHostIP4#> 5</th>
                                             <td>
                                                 <input type="text" maxlength="15" class="input" size="15" name="di_addr4" style="width: 145px" value="<% nvram_get_x("","di_addr4"); %>" onkeypress="return is_ipaddr(this,event);"/>&nbsp;:
                                                 <input type="text" maxlength="5" class="input" size="10" name="di_port4" style="width: 44px;"  value="<% nvram_get_x("","di_port4"); %>" onkeypress="return is_number(this,event);"/>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><#InetCheckHostIP4#> 6:</th>
+                                            <th><#InetCheckHostIP4#> 6</th>
                                             <td>
                                                 <input type="text" maxlength="15" class="input" size="15" name="di_addr5" style="width: 145px" value="<% nvram_get_x("","di_addr5"); %>" onkeypress="return is_ipaddr(this,event);"/>&nbsp;:
                                                 <input type="text" maxlength="5" class="input" size="10" name="di_port5" style="width: 44px;"  value="<% nvram_get_x("","di_port5"); %>" onkeypress="return is_number(this,event);"/>
