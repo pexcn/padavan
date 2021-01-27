@@ -13,9 +13,9 @@ Wi-Fi 2.4 GHz SSID: Padavan
 Wi-Fi 5 GHz SSID: Padavan-5G
 Wi-Fi Password: 1234567890
 
-Gateway IP: 192.168.1.1 / my.router
-Gateway Username: admin
-Gateway Password: admin
+LAN IP: 192.168.1.1
+Username: admin
+Password: admin
 ```
 
 ### How do I get set up? ###
