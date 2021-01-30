@@ -1,7 +1,8 @@
 #!/bin/bash -e
 
 select_config() {
-  cp trunk/configs/templates/mi_mini.config trunk/.config
+  rm -f trunk/.config
+  cp trunk/configs/templates/$1.config trunk/.config
 }
 
 update_config() {
@@ -12,8 +13,10 @@ update_config() {
 
 build_toolchain() {
   cd toolchain-mipsel
+  [ -e .toolchain-existed ] && return
   sudo ./clean_sources
   sudo ./build_toolchain
+  touch .toolchain-existed
   cd ..
 }
 

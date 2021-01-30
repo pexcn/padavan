@@ -47,7 +47,9 @@ env:
 
 script:
   - travis_wait 30 sleep infinity &
-  - ./build.sh &> /dev/null
+  - ./build.sh mi-mini &> /dev/null
+  - ./build.sh k2p &> /dev/null
+  - ./build.sh k2p-5.0 &> /dev/null
 
 after_success:
   - ./deploy.sh
