@@ -1,8 +1,10 @@
 #!/bin/bash -e
 
+CONFIG_NAME="$1"
+
 select_config() {
   rm -f trunk/.config
-  cp trunk/configs/templates/$1.config trunk/.config
+  cp trunk/configs/templates/$CONFIG_NAME.config trunk/.config
 }
 
 update_config() {
