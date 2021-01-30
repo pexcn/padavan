@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    env:
+      build_variant: ${{ matrix.build_variant }}
+      targets: ${{ matrix.targets }}
+    strategy:
+      matrix:
+        include:
+          - build_variant: "MT7620"
+            targets: "MI-MINI"
+          - build_variant: "MT7621"
+            targets: "K2P K2P-5.0"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y \
+            autoconf automake autopoint build-essential \
+            libtool pkg-config bison flex make gcc git gawk \
+            gettext texinfo patch libgmp3-dev libltdl-dev \
+            libmpc-dev libmpfr-dev zlib1g-dev bzip2 xz-utils \
+            cpio kmod automake1.11
+      - name: Run build
+        run: |
+          for i in $targets; do ./build.sh $i; done
+      - name: Upload to Artifact
+        uses: actions/upload-artifact@v2.2.1
+        with:
+          name: ${{ env.build_variant }}
+          path: trunk/images/*.trx
