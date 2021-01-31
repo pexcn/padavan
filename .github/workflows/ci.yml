@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     env:
+      TZ: Asia/Taipei
       build_variant: ${{ matrix.build_variant }}
       targets: ${{ matrix.targets }}
     strategy:
