@@ -2,36 +2,31 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: master
+  release:
+    types: published
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Taipei
 
 jobs:
   build:
     runs-on: ubuntu-20.04
-    env:
-      TZ: Asia/Taipei
-      build_variant: ${{ matrix.build_variant }}
-      targets: ${{ matrix.targets }}
+    container:
+      image: pexcn/docker-images:buster-padavan
+      options: --user builder
     strategy:
       matrix:
-        include:
-          - build_variant: "MT7620"
-            targets: "MI-MINI"
+        TARGET:
+          - "MI-MINI"
     steps:
-      - uses: actions/checkout@v2
-      - name: Prepare environment
-        run: |
-          sudo apt-get update
-          sudo apt-get install --no-install-recommends -y \
-            autoconf automake autopoint build-essential \
-            libtool pkg-config bison flex make gcc git gawk \
-            gettext texinfo patch libgmp3-dev libltdl-dev \
-            libmpc-dev libmpfr-dev zlib1g-dev bzip2 xz-utils \
-            cpio kmod automake1.11
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Run build
-        run: |
-          for i in $targets; do ./build.sh $i; done
+        run: ./build.sh ${{ matrix.TARGET }}
       - name: Upload to Artifact
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.build_variant }}
+          name: ${{ matrix.TARGET }}
           path: trunk/images/*.trx

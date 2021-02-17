@@ -15,10 +15,10 @@ update_config() {
 
 build_toolchain() {
   cd toolchain-mipsel
-  [ -e .toolchain-existed ] && return
+  [ -e .toolchain-ok ] && return
   sudo ./clean_sources
   sudo ./build_toolchain
-  touch .toolchain-existed
+  touch .toolchain-ok
   cd ..
 }
 
